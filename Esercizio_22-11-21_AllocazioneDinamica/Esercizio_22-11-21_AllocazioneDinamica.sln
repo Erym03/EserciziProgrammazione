@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Esercizio_22-11-21_AllocazioneDinamica", "Esercizio_22-11-21_AllocazioneDinamica.vcxproj", "{C1E49276-C814-497A-BF43-9FC9F1A3501B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Debug|x64.ActiveCfg = Debug|x64
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Debug|x64.Build.0 = Debug|x64
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Debug|x86.ActiveCfg = Debug|Win32
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Debug|x86.Build.0 = Debug|Win32
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Release|x64.ActiveCfg = Release|x64
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Release|x64.Build.0 = Release|x64
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Release|x86.ActiveCfg = Release|Win32
+		{C1E49276-C814-497A-BF43-9FC9F1A3501B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {744E4A44-E0F9-46B6-94E9-AA96D595FA5B}
+	EndGlobalSection
+EndGlobal

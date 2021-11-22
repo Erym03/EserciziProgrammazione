@@ -1,0 +1,2 @@
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Esercizio_16-11-21_funzioniArray\Esercizio_22-11-21_AllocazioneDinamica\Debug\Esercizio_22-11-21_AllocazioneDinamica.exe
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Esercizio_22-11-21_AllocazioneDinamica\Debug\Esercizio_22-11-21_AllocazioneDinamica.exe
