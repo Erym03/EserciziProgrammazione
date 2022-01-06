@@ -1,5 +1,0 @@
-﻿  Origine.cpp
-C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio1\Origine.cpp(16,27): warning C4018: '<': errata corrispondenza tra signed e unsigned
-C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio1\Origine.cpp(22,27): warning C4018: '<': errata corrispondenza tra signed e unsigned
-MSVCRTD.lib(exe_main.obj) : error LNK2019: riferimento al simbolo esterno _main non risolto nella funzione "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio1\Debug\ProvaDiLaboratorio1.exe : fatal error LNK1120: 1 esterni non risolti
