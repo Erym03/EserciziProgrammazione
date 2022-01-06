@@ -1,0 +1,3 @@
+﻿  Origine.cpp
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_24-9-2019\Origine.cpp(29,16): warning C4244: 'inizializzazione': conversione da 'double' a 'int'. Possibile perdita di dati.
+  ProvaDiLaboratorio_24-9-2019.vcxproj -> C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_24-9-2019\Debug\ProvaDiLaboratorio_24-9-2019.exe

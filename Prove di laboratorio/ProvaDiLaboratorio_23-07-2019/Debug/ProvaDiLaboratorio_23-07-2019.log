@@ -1,0 +1,6 @@
+﻿  Origine.cpp
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_23-07-2019\Origine.cpp(27,37): warning C4244: '=': conversione da 'double' a 'int'. Possibile perdita di dati.
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_23-07-2019\Origine.cpp(36,37): warning C4244: '=': conversione da 'double' a 'int'. Possibile perdita di dati.
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_23-07-2019\Origine.cpp(67,18): warning C4018: '<': errata corrispondenza tra signed e unsigned
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_23-07-2019\Origine.cpp(72,20): warning C4018: '<': errata corrispondenza tra signed e unsigned
+  ProvaDiLaboratorio_23-07-2019.vcxproj -> C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_23-07-2019\Debug\ProvaDiLaboratorio_23-07-2019.exe
