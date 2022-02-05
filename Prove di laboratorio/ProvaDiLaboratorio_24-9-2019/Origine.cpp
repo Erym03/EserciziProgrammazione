@@ -1,138 +1,277 @@
-﻿/*
-Scrivere un metodo che prenda in input un parametro formale matrice K di double di dimensioni n × m e
-due interi a e b, e restituisca un array A di short di dimensione m, in cui l’elemento A[i] `e calcolato come
-il numero di elementi della colonna i−esima di K tali che, approssimati all’intero pi`u vicino, siano compresi
-tra a e b (inclusi). NB: si assuma a < b.
+﻿#include <iostream>
+#include <string>
 
-Scrivere un metodo che prenda in input una matrice di stringhe S di dimensioni n × m, uno short k, ed una
-stringa w. Il metodo restituisca il valore booleano true se esiste almeno una riga in P tale che la stringa w
-sia sottostringa di un numero di stringhe della riga stessa che sia minore o uguale a k.
-*/
-
-#include <iostream>
-#include <string.h>
 using namespace std;
 
-short *metodo(double ** K, int n, int m, int a, int b)
-{
-	short* array = new short[m];
-	for (int i = 0; i < m; i++)
-	{
-		array[i] = 0;
-	}
 
-	//Verifica per colonne
-	for (int j = 0; j < m; j++)
-	{
-		for(int i = 0; i<n; i++)
-		{
-			int compara = K[i][j] + 0.5;
-			if(compara >= a && compara <=b)
-			{
-				array[j]++;
-			}
-		}
-	}
-	return array;
+/*
+Data una matrice S di puntatori a stringhe, creare un metodo che ritorni la vocale più frequente nella matrice.
+*/
+
+bool metodo(int** K, int n, double w)
+{
+    //Assegnare valori massimo e minimo
+    double minimo = (double)K[0][0];
+    double massimo = (double)minimo;
+    double rapporto;
+
+    //Calcolare diagonale secondaria
+    //Verifica per righe:
+    for (int i = 0, j = (n - 1); i < n; i++, j--)
+    {
+        int val = (double)K[i][j];
+
+        if (val < minimo)
+            minimo = val;
+
+        if (val > massimo)
+            massimo = val;
+    }
+
+    rapporto = minimo / massimo;
+
+    if (rapporto <= w)
+        return true;
+
+    return false;
+
+
 }
 
-bool metodo2(string **S, int n, int m, short k, string w)
+bool metodoStringhe(string** A, int n, int m, unsigned short k, unsigned short s)
 {
-	//Verifica per righe
-	for (int i = 0; i < n; i++)
-	{
-		int counter = 0;
-		for (int j = 0; j < m; j++)
-		{
-			string compara = S[i][j];
-			if(compara.find(w) != string :: npos)
-			{
-				counter++;
-			}
-		}
-		if(counter <= k)
-		{
-			return true;
-		}
-	}
+    //Verifica per righe
+    for (int i = 0; i < n; i++)
+    {
+        int conta_colonne = 0;
+        //Verifica per colonne
+        for (int j = 0; j < m; j++)
+        {
+            int conta_lettere = 0;
+            string stringa = A[i][j];
 
-	return false;
+            //Verifica ogni lettera
+            for (int l = 0; l < stringa.length(); l++)
+            {
+
+                if (stringa[l] >= 'A' && stringa[l] <= 'Z') //Se è maiuscola
+                    conta_lettere++;
+            }
+
+            if (conta_lettere < s)
+                conta_colonne++;
+
+        }
+
+        if (conta_colonne >= k)
+            return true;
+    }
+
+    return false;
 }
+
+char metodo3(string*** S, int n, int m)
+{
+    char vocabolario[5] = { 'a', 'e', 'i', 'o','u' };
+    int counter_vocale[5] = { 0, 0, 0, 0, 0 };
+    int vocaleMax[2] = { 0, 0 };                        //0 = vocale; 1 = n°ricorsioni vocale
+
+    //Verifica per righe
+    for (int i = 0; i < n; i++)
+    {
+        //Verifica per colonne
+        for (int j = 0; j < m; j++)
+        {
+
+            string stringa = *S[i][j];
+            int lunghezzaS = stringa.length();
+
+            //Verifica per ogni lettera della stringa
+            for (int l = 0; l < lunghezzaS; l++)
+            {
+                //Verifica per ogni vocale
+                for (int k = 0; k < 5; k++)
+                {
+                    //Se la stringa ha una vocale, aumentare il corrispettivo contatore
+                    if (stringa[l] == vocabolario[k])
+                        counter_vocale[k]++;
+                }
+            }
+
+        }
+    }
+
+    //Conteggio vocaleMax
+    for (int i = 0; i < 5; i++)
+    {
+        if (counter_vocale[i] > vocaleMax[1]) //Se la vocale è maggiore di vocaleMax
+        {
+            vocaleMax[0] = i;
+            vocaleMax[1] = counter_vocale[i];
+        }
+    }
+
+    return vocabolario[vocaleMax[0]];
+}
+
+string **metodo4(string**A, int n, int m, int k)
+{
+    char vocabolario[] = { 'j', 'k', 'w', 'x', 'y'};
+
+    string** ritorno = A;
+
+    //Verifica righe
+    for(int j=0; j<n; j++)
+    {
+        //Verifica lettere
+        for (int i = 0; i < 5; i++)
+        {
+            
+            size_t found = ritorno[j][k].find(vocabolario[i]);
+            
+            //Cancella tutte le ricorsione della lettera nella stringa  
+            while (found != string::npos)
+            {
+                cout << "Trovato " << vocabolario[i] << ": " << found << endl;
+                ritorno[j][k].erase(found, 1);
+                found = ritorno[j][k].find(vocabolario[i]);
+            }
+        }
+    }
+
+    return ritorno;
+}
+
 
 int main()
 {
-	/*
-	* //Esercizio 1
-	int dim = 5;
-	double** matrix = new double* [dim];
+    /*
+    int ** matrix = new int *[5];
 
-	for (int i = 0; i < dim; i++)
-	{
-		matrix[i] = new double[dim];
-	}
+    for(int i=0; i<5; i++)
+    {
+        matrix[i] = new int[5];
 
-	//Riempi matrice
-	for (int i = 0; i < dim; i++)
-	{
-		for (int j = 0; j < dim; j++)
-		{
-			cout << "Inserisci valore " << i << " " << j << endl;
-			cin >> matrix[i][j];
-		}
-	}
+    }
 
-	//Visualizza matrice
-	for (int i = 0; i < dim; i++)
-	{
-		for (int j = 0; j < dim; j++)
-		{
-			cout << matrix[i][j] << " - ";
-		}
-		cout << endl;
-	}
+    //Inserimento
+    for(int i=0; i<5; i++)
+    {
+        for(int j=0; j<5; j++)
+        {
+            cout<<"Inderisci valore " << i<< " "<<j<<endl;
+            cin>>matrix[i][j];
+        }
+    }
 
-	short* metodo1 = metodo(matrix, dim, dim, 2, 5);
-	cout << endl;
+    //Stampa matrice
+    for(int i=0; i<5; i++)
+    {
+        for(int j=0; j<5; j++)
+        {
+            cout<<matrix[i][j]<< " - ";
+        }
+        cout<<endl;
+    }
 
-	for (int i = 0; i < dim; i++)
-	{
-		cout << metodo1[i] << endl;
-	}
-	
-	*/
+    cout<<metodo(matrix, 5, 2.2)<<endl;
+    */
 
-	//Esercizio 1
-	int dim = 5;
-	string** matrix = new string * [dim];
+    /*
+    string*** matrix = new string ** [5];
 
-	for (int i = 0; i < dim; i++)
-	{
-		matrix[i] = new string[dim];
-	}
+    for (int i = 0; i < 5; i++)
+    {
+        matrix[i] = new string*[5];
+        for (int j = 0; j < 5; j++)
+        {
+            matrix[i][j] = new string();
+        }
+    }
+    
+    
 
-	//Riempi matrice
-	for (int i = 0; i < dim; i++)
-	{
-		for (int j = 0; j < dim; j++)
-		{
-			cout << "Inserisci valore " << i << " " << j << endl;
-			cin >> matrix[i][j];
-		}
-	}
+    //Inserimento
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << "Inderisci valore " << i << " " << j << endl;
+            cin >> *matrix[i][j];
+        }
+    }
 
-	//Visualizza matrice
-	for (int i = 0; i < dim; i++)
-	{
-		for (int j = 0; j < dim; j++)
-		{
-			cout << matrix[i][j] << " - ";
-		}
-		cout << endl;
-	}
+    //Stampa matrice
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << *matrix[i][j] << " - ";
+        }
+        cout << endl;
+    }
 
-	
-	cout << metodo2(matrix, dim, dim, 3, "ciao");
-	
-	
+    cout <<"La vocale più ricorrente: "<<metodo3(matrix, 5, 5)<< endl;
+    */
+    
+    
+    
 
+
+    
+    string** matrix = new string *[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        matrix[i] = new string[5];
+
+    }
+
+    //Inserimento
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << "Inderisci valore " << i << " " << j << endl;
+            cin >> matrix[i][j];
+        }
+    }
+
+    //Stampa matrice
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << matrix[i][j] << " - ";
+        }
+        cout << endl;
+    }
+
+    matrix = metodo4(matrix, 5, 5, 3);
+
+    cout << endl << endl << "Matrice dopo cancellazione" << endl << endl;
+
+    /*
+    string a = "ciao camico";
+    char b[2] = { 'a', 'b' };
+    if (a.find(b[0]) != string::npos)
+        cout << "trovato";
+    */
+    
+
+    
+    //Stampa matrice
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << matrix[i][j] << " - ";
+        }
+        cout << endl;
+    }
+    
+    
+    
+    
+    
 }

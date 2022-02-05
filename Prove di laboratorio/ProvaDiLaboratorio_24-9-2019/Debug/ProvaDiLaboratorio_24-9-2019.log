@@ -1,3 +1,4 @@
 ﻿  Origine.cpp
-C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_24-9-2019\Origine.cpp(29,16): warning C4244: 'inizializzazione': conversione da 'double' a 'int'. Possibile perdita di dati.
-  ProvaDiLaboratorio_24-9-2019.vcxproj -> C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\ProvaDiLaboratorio_24-9-2019\Debug\ProvaDiLaboratorio_24-9-2019.exe
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Prove di laboratorio\ProvaDiLaboratorio_24-9-2019\Origine.cpp(22,17): warning C4244: 'inizializzazione': conversione da 'double' a 'int'. Possibile perdita di dati.
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Prove di laboratorio\ProvaDiLaboratorio_24-9-2019\Origine.cpp(54,31): warning C4018: '<': errata corrispondenza tra signed e unsigned
+  ProvaDiLaboratorio_24-9-2019.vcxproj -> C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Prove di laboratorio\ProvaDiLaboratorio_24-9-2019\Debug\ProvaDiLaboratorio_24-9-2019.exe

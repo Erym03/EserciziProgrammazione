@@ -1,0 +1,3 @@
+﻿  Origine.cpp
+C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_30-1-22\Origine.cpp(17,13): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
+  Prova2_30-1-22.vcxproj -> C:\Users\2care\Documents\CODICI\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_30-1-22\Debug\Prova2_30-1-22.exe
