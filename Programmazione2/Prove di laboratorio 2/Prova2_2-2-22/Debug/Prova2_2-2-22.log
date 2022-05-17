@@ -1,0 +1,11 @@
+﻿  Origine.cpp
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_2-2-22\Origine.cpp(16,13): warning C4244: 'argomento': conversione da 'time_t' a 'unsigned int'. Possibile perdita di dati.
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_2-2-22\Origine.cpp(89,11): warning C4244: '=': conversione da 'double' a 'T'. Possibile perdita di dati.
+          with
+          [
+              T=int
+          ]
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_2-2-22\Origine.cpp(81): message : durante la compilazione della funzione membro 'C<int>::C(short)' di modello classe
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_2-2-22\Origine.cpp(141): message : vedere il riferimento all'istanza 'C<int>::C(short)' della funzione modello di cui è in corso la compilazione
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_2-2-22\Origine.cpp(141): message : vedere il riferimento all'istanza 'C<int>' di modello classe di cui è in corso la compilazione
+  Prova2_2-2-22.vcxproj -> C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Prove di laboratorio 2\Prova2_2-2-22\Debug\Prova2_2-2-22.exe
