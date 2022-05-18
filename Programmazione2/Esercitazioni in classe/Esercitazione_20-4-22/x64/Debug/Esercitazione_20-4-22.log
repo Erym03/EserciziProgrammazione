@@ -1,0 +1,6 @@
+﻿  Origine.cpp
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Programmazione2\Esercitazioni\Esercitazione_20-4-22\Origine.cpp(30,1): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Programmazione2\Esercitazioni\Esercitazione_20-4-22\Origine.cpp(34,1): warning C4267: '=': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Programmazione2\Esercitazioni\Esercitazione_20-4-22\Origine.cpp(38,1): warning C4267: '=': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Programmazione2\Esercitazioni\Esercitazione_20-4-22\Origine.cpp(42,1): warning C4267: '=': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+  Esercitazione_20-4-22.vcxproj -> C:\Users\2care\OneDrive\Documenti\Codici\C++\EserciziProgrammazione\Programmazione2\Esercitazioni\Esercitazione_20-4-22\x64\Debug\Esercitazione_20-4-22.exe
